@@ -38,7 +38,7 @@ class Characters(db.Model):
                                                                                             # automáticamente un atributo adicional en la tabla Characters que permite 
                                                                                             # acceder a los registros relacionados en la tabla FavoritesCharacters
     def __repr__(self):
-        return '<Characters %r>' %  self.name
+        return '<Characters %r>' %  self.name #
 
     def serialize(self):
         return {
@@ -66,6 +66,8 @@ class Planets(db.Model):
         return {
             "id": self.id,
             "name": self.name,
+            "terrain": self.terrain,
+            "population":self.population
         }
 
 
